@@ -30,7 +30,7 @@ for l in sys.stdin:
             m = re.match('%%(#+|!) (.*)$', l)
             if m is not None:
                 if m.group(1) != '!':
-                    print "%s %s"%(m.group(1), m.group(2))
+                    print "{0!s} {1!s}".format(m.group(1), m.group(2))
                 print_syntax(APPENDICES[m.group(2)])
                 del APPENDICES[m.group(2)]
                 print
